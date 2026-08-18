@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widden | FinTech & InsurTech Implementation Executive</title>
+    <meta name="description"
+        content="Crisis-tested IT Executive & FinTech Delivery Lead. Specializing in cross-border payment platforms, enterprise governance, and project recovery.">
+
+    <!-- Modern Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #0b0f17;
+            --bg-card: #131b2e;
+            --bg-card-hover: #1a243d;
+            --border-color: #1e2d4a;
+            --border-highlight: #2f456e;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --accent-emerald: #10b981;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            padding-bottom: 4rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #7dd3fc;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* HEADER / HERO SECTION */
+        header {
+            position: relative;
+            padding: 5rem 0 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+            background: radial-gradient(circle at 50% 0%, #172554 0%, var(--bg-dark) 70%);
+            overflow: hidden;
+        }
+
+        .hero-layout {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        /* Initial Avatar Fallback */
+        .avatar-badge {
+            width: 110px;
+            height: 110px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 0 30px var(--accent-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            flex-shrink: 0;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-bio {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin-bottom: 1.5rem;
+        }
+
+        .badges-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            background-color: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #cbd5e1;
+            font-family: var(--font-mono);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: #fff;
+            padding: 0.85rem 1.8rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+            color: #fff;
+        }
+
+        /* GRID / CARDS */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .grid-three {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.25s ease;
+        }
+
+        .card:hover {
+            background-color: var(--bg-card-hover);
+            border-color: var(--border-highlight);
+            transform: translateY(-3px);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* TIMELINE / TRACK RECORD */
+        .job-timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .job-block {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .job-block::before {
+            content: '';
+            position: absolute;
+            left: calc(-2rem - 6px);
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent-blue);
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .job-company {
+            font-size: 1rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        .job-date {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .job-list {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+
+        .job-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .job-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        /* AUDIT PACKAGE CARD */
+        .offer-card {
+            background: linear-gradient(135deg, rgba(19, 27, 46, 0.9), rgba(15, 23, 42, 0.9));
+            border: 1px solid var(--accent-blue);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 0 25px var(--accent-glow);
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background-color: rgba(16, 185, 129, 0.15);
+            color: var(--accent-emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            margin-bottom: 1rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border-color);
+            margin: 4rem 0;
+            border: none;
+        }
+
+        /* FOOTER / CONTACT */
+        .contact-box {
+            text-align: center;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-layout {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <!-- HERO SECTION -->
+    <header>
+        <div class="container">
+            <div class="hero-layout">
+
+                <!-- HERO TEXT -->
+                <div class="hero-text">
+                    <h1>Namatayi Widden Bere</h1>
+                    <div class="hero-subtitle">FinTech & InsurTech Implementation Executive</div>
+                    <p class="hero-bio">
+                        Crisis-tested IT Executive & Board-level strategist with 20+ years of experience. Expert in
+                        executing high-stakes digital payment platforms, cross-border system rollouts, and bridging
+                        engineering teams with corporate goals.
+                    </p>
+                    <div class="badges-group">
+                        <span class="badge">M.Com Project Management</span>
+                        <span class="badge">B.Sc (Hons) IT</span>
+                        <span class="badge">Accepted DBA Candidate</span>
+                    </div>
+                    <div class="cta-group">
+                        <a href="#contact" class="cta-btn">Book Delivery Audit</a>
+                        <a href="/Namatayi_Widden_Bere_CV.pdf" download class="cta-btn cta-btn-outline">Download
+                            Executive CV (PDF)</a>
+                    </div>
+                </div>
+
+                <!-- PROFILE PICTURE ON EXTREME RIGHT -->
+                <div class="hero-image-wrapper">
+                    <img src="wbnoback2.png" alt="Namatayi Widden Bere" class="hero-portrait">
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="grid-three" style="margin-top: 3rem;">
+        <div class="card" style="text-align: center;">
+            <h3 style="font-size: 2.2rem; color: var(--accent-blue); margin-bottom: 0.2rem;">10+</h3>
+            <p>Years Enterprise Leadership</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <h3 style="font-size: 2.2rem; color: var(--accent-emerald); margin-bottom: 0.2rem;">99%</h3>
+            <p>IT Project Rollout Success</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <h3 style="font-size: 2.2rem; color: var(--accent-blue); margin-bottom: 0.2rem;">4+</h3>
+            <p>African FinTech Deployments</p>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <!-- CORE EXPERTISE -->
+        <section style="margin-top: 4rem;">
+            <h2 class="section-title">Core Capability Stack</h2>
+            <p class="section-desc">Strategic alignment, regulatory compliance, and cross-border tech deployment.</p>
+
+            <div class="grid-three">
+                <div class="card">
+                    <span class="card-icon">⚡</span>
+                    <h3>Cross-Border Execution</h3>
+                    <p>Spearheaded multi-country mobile payment systems across Zimbabwe, Rwanda, Tanzania, and Eswatini
+                        from architectural design to live market activation.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🛡️</span>
+                    <h3>Board Governance</h3>
+                    <p>Former GM of IT & Strategy for enterprise insurance. Directly accountable to corporate boards for
+                        multi-million dollar tech roadmaps and risk mitigation.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">📊</span>
+                    <h3>Delivery Frameworks</h3>
+                    <p>Deep operational mastery of Agile, Scrum, and Hybrid methodologies. Advanced hands-on deployment
+                        of Jira, Confluence, and remote delivery stacks.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- TRACK RECORD -->
+        <section>
+            <h2 class="section-title">Executive Track Record</h2>
+            <p class="section-desc">A continuous history of high-stakes technical leadership and system rollouts.</p>
+
+            <div class="job-timeline">
+
+                <div class="job-block">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Managing Consultant & Strategy Advisor</div>
+                            <div class="job-company">Widber's Consulting, Eswatini</div>
+                        </div>
+                        <div class="job-date">2022 — PRESENT</div>
+                    </div>
+                    <ul class="job-list">
+                        <li>Deliver fractional IT governance, strategic roadmapping, and project recovery for
+                            growth-stage tech companies.</li>
+                        <li>Advise executives on aligning backend software architecture with go-to-market business
+                            strategy.</li>
+                    </ul>
+                </div>
+
+                <div class="job-block">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">General Manager — IT & Corporate Strategy</div>
+                            <div class="job-company">United Holdings Limited, Eswatini</div>
+                        </div>
+                        <div class="job-date">2018 — 2022</div>
+                    </div>
+                    <ul class="job-list">
+                        <li>Directed full-lifecycle IT strategy and digital transformation, reporting directly to the
+                            Board of Directors.</li>
+                        <li>Unified IT, Sales, and Marketing engineering pipelines to expand regional market share and
+                            operational margin.</li>
+                        <li>Managed enterprise technology budgets and led multi-disciplinary software engineering
+                            organizations.</li>
+                    </ul>
+                </div>
+
+                <div class="job-block">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">International Program Manager — FinTech Deployments</div>
+                            <div class="job-company">Nearex (Pty) Ltd, India</div>
+                        </div>
+                        <div class="job-date">2014 — 2018</div>
+                    </div>
+                    <ul class="job-list">
+                        <li>Managed end-to-end implementation of the "Xipp" mobile microfinance platform from concept to
+                            full scale.</li>
+                        <li>Successfully deployed mobile financial ecosystems in 4 African markets (Zimbabwe, Rwanda,
+                            Tanzania, Eswatini).</li>
+                        <li>Navigated international regulatory compliance, telecom carrier integrations, and regional
+                            stakeholder dynamics.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- INTERVENTION PACKAGE -->
+        <section>
+            <div class="offer-card">
+                <span class="offer-badge">FRACTIONAL OFFERING</span>
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">The 5-Hour Technical Delivery Audit</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; max-width: 800px;">
+                    Are your software engineering teams missing critical sprint deadlines? Is communication stalling
+                    between product leads and executive leadership? I perform a rapid diagnostic of your Jira pipelines,
+                    release bottlenecks, and delivery risks—delivering an actionable risk profile in 48 hours.
+                </p>
+                <a href="#contact" class="cta-btn">Request Delivery Audit</a>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="contact-box">
+                <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Secure Strategic Execution</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Available for global, 100% remote fractional,
+                    contract, or advisory leadership roles.</p>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    <strong>Direct Corporate Email:</strong><br>
+                    <a href="mailto:widden@widberz.com"
+                        style="font-size: 1.3rem; font-weight: 700;">widden@widberz.com</a>
+                </p>
+                <p style="color: var(--text-muted);">
+                    Corporate Domain: <a href="https://widberz.com" target="_blank">widberz.com</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
